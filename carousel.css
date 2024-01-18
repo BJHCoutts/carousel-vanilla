@@ -60,6 +60,25 @@ ul {
 	transition: scale ease-in 0.15s;
 }
 
+.image-track li {
+	position: relative;
+}
+
+.img-number {
+	position: absolute;
+	color: white;
+	background-color: grey;
+	font-variant-numeric: tabular-nums;
+	border-radius: 50%;
+	top: 5px;
+	left: 5px;
+	height: 20px;
+	width: 20px;
+	display: grid;
+	place-items: center;
+	box-shadow: 1.5px 1.5px 3px darkslategrey;
+}
+
 .image-track img:hover {
 	scale: 103%;
 }

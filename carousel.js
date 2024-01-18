@@ -92,6 +92,11 @@ function initializeApp(numOfSlides) {
 
 			listItemElement.appendChild(imageElement)
 			imageTrackElement.appendChild(listItemElement)
+
+			const imageNumber = document.createElement('div')
+			imageNumber.classList = 'img-number'
+			imageNumber.innerText = i
+			listItemElement.appendChild(imageNumber)
 		}
 	}
 
