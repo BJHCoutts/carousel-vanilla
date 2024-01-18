@@ -59,7 +59,7 @@ function initializeApp(numOfSlides) {
 		playForwardSetInterval = null
 		if (typeof playBackwardSetInterval === 'number') {
 			clearInterval(playBackwardSetInterval)
-			playForwardSetInterval = null
+			playBackwardSetInterval = null
 		} else {
 			playBackwardSetInterval = setInterval(prevSlide, intervalTime)
 		}
