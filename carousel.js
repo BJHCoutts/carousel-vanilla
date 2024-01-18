@@ -46,6 +46,7 @@ function initializeApp(numOfSlides) {
 	function toggleAutoPlayForward() {
 		clearInterval(playBackwardSetInterval)
 		playBackwardSetInterval = null
+		autoplayBackwardIconElement.classList = ''
 		if (typeof playForwardSetInterval === 'number') {
 			clearInterval(playForwardSetInterval)
 			autoplayForwardIconElement.classList = ''
@@ -59,6 +60,7 @@ function initializeApp(numOfSlides) {
 	function toggleAutoPlayBackward() {
 		clearInterval(playForwardSetInterval)
 		playForwardSetInterval = null
+		autoplayForwardIconElement.classList = ''
 		if (typeof playBackwardSetInterval === 'number') {
 			clearInterval(playBackwardSetInterval)
 			autoplayBackwardIconElement.classList = ''
