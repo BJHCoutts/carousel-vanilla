@@ -15,11 +15,12 @@ h2 {
 	font-size: 1.2rem;
 	margin: 2em auto 1.5em;
 	text-align: center;
-	color: hsla(0, 0%, 0%, 75%);
+	color: hsla(0, 0%, 0%, 65%);
 }
 
 ul {
 	list-style-type: none;
+	color: hsla(0, 0%, 0%, 70%);
 }
 
 .outer-container {
@@ -94,7 +95,7 @@ ul {
 	justify-content: center;
 	align-items: center;
 	height: 60px;
-	margin-top: 50px;
+	margin: 50px auto 4em;
 }
 
 .icon-container svg {
