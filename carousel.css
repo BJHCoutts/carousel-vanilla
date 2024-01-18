@@ -104,6 +104,6 @@ ul {
 	fill: darkslategrey;
 }
 
-.active-icon {
+.icon-container .active-icon {
 	fill: lightgrey;
 }

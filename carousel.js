@@ -48,9 +48,11 @@ function initializeApp(numOfSlides) {
 		playBackwardSetInterval = null
 		if (typeof playForwardSetInterval === 'number') {
 			clearInterval(playForwardSetInterval)
+			autoplayForwardIconElement.classList = ''
 			playForwardSetInterval = null
 		} else {
 			playForwardSetInterval = setInterval(nextSlide, intervalTime)
+			autoplayForwardIconElement.classList = 'active-icon'
 		}
 	}
 
@@ -59,9 +61,11 @@ function initializeApp(numOfSlides) {
 		playForwardSetInterval = null
 		if (typeof playBackwardSetInterval === 'number') {
 			clearInterval(playBackwardSetInterval)
+			autoplayBackwardIconElement.classList = ''
 			playBackwardSetInterval = null
 		} else {
 			playBackwardSetInterval = setInterval(prevSlide, intervalTime)
+			autoplayBackwardIconElement.classList = 'active-icon'
 		}
 	}
 
