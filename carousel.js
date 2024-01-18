@@ -73,6 +73,7 @@ function initializeApp(numOfSlides) {
 
 			imageElement.src = randomImage
 			imageElement.id = `image${i}`
+			imageElement.alt = `image ${i} description`
 
 			listItemElement.appendChild(imageElement)
 			imageTrackElement.appendChild(listItemElement)
