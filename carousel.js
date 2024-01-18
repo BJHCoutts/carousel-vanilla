@@ -28,7 +28,7 @@ function initializeApp(numOfSlides) {
 
 		currentSlide = id
 		const newDot = document.getElementById(`dot${id}`)
-		newDot.classList = 'dot active'
+		newDot.classList = 'dot active-dot'
 	}
 
 	function nextSlide() {
@@ -102,7 +102,7 @@ function initializeApp(numOfSlides) {
 	nextIconElement.addEventListener('click', nextSlide)
 
 	const initialDot = document.getElementById(`dot${currentSlide}`)
-	initialDot.classList = 'dot active'
+	initialDot.classList = 'dot active-dot'
 }
 
 initializeApp(6)

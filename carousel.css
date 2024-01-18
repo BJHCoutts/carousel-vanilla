@@ -2,11 +2,13 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	font-family: sans-serif;
 }
 
 h1 {
 	margin: 2em auto 1.5em;
 	text-align: center;
+	color: hsla(0, 0%, 0%, 75%);
 }
 
 ul {
@@ -68,10 +70,14 @@ ul {
 	height: 10px;
 	aspect-ratio: 1/1;
 	cursor: pointer;
-	transition: all 0.3s ease-in;
+	transition: all 0.25s ease-in;
 }
 
-.active {
+.dot:hover {
+	background-color: darkslategrey;
+}
+
+.active-dot {
 	height: 15px;
 	background-color: lightgrey;
 }
@@ -96,4 +102,8 @@ ul {
 .icon-container svg:hover {
 	scale: 105%;
 	fill: darkslategrey;
+}
+
+.active-icon {
+	fill: lightgrey;
 }
