@@ -33,6 +33,7 @@ ul {
 	overflow-x: scroll;
 	gap: 15px;
 	padding: 0 calc(50% - 100px);
+	height: 210px;
 }
 
 .image-track::-webkit-scrollbar {
@@ -43,6 +44,14 @@ ul {
 .image-track {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
+}
+
+.image-track img {
+	transition: scale ease-in 0.15s;
+}
+
+.image-track img:hover {
+	scale: 103%;
 }
 
 .dot-container {
@@ -70,7 +79,8 @@ ul {
 .icon-container {
 	display: flex;
 	justify-content: center;
-	height: 50px;
+	align-items: center;
+	height: 60px;
 	margin-top: 50px;
 }
 
@@ -80,4 +90,10 @@ ul {
 	width: 50px;
 	display: block;
 	cursor: pointer;
+	transition: scale ease-in 0.2s;
+}
+
+.icon-container svg:hover {
+	scale: 105%;
+	fill: darkslategrey;
 }
