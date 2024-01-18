@@ -9,6 +9,9 @@ function initializeApp(numOfSlides) {
 	)
 	const prevIconElement = document.getElementById('prev-icon')
 	const nextIconElement = document.getElementById('next-icon')
+	const numberOfTimesViewedListElement = document.querySelector(
+		'.number-of-times-viewed-container'
+	)
 
 	const intervalTime = 800
 
@@ -29,6 +32,12 @@ function initializeApp(numOfSlides) {
 		currentSlide = id
 		const newDot = document.getElementById(`dot${id}`)
 		newDot.classList = 'dot active-dot'
+
+		const viewTotalElementToBeUpdated = document.getElementById(
+			`times-viewed-${id}`
+		)
+		viewTotalElementToBeUpdated.innerText =
+			parseInt(viewTotalElementToBeUpdated.innerText) + 1
 	}
 
 	function nextSlide() {
@@ -97,8 +106,28 @@ function initializeApp(numOfSlides) {
 		}
 	}
 
+	function createTimesViewedListItems(numOfSlides) {
+		for (let i = 0; i < numOfSlides; i++) {
+			const timesViewedListItemElement = document.createElement('li')
+			timesViewedListItemElement.id = `number-of-times-viewed-${i}`
+			timesViewedListItemElement.innerText = `Number of times Image #${i} has been viewed: `
+
+			const timesViewedListItemAmountElement = document.createElement('span')
+			timesViewedListItemAmountElement.id = `times-viewed-${i}`
+			if (timesViewedListItemElement.id === 'number-of-times-viewed-0') {
+				timesViewedListItemAmountElement.innerText = 1
+			} else {
+				timesViewedListItemAmountElement.innerText = 0
+			}
+			timesViewedListItemElement.appendChild(timesViewedListItemAmountElement)
+
+			numberOfTimesViewedListElement.appendChild(timesViewedListItemElement)
+		}
+	}
+
 	createSlides(numOfSlides)
 	createDots(numOfSlides)
+	createTimesViewedListItems(numOfSlides)
 
 	autoplayBackwardIconElement.addEventListener('click', toggleAutoPlayBackward)
 
