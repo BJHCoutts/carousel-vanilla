@@ -1,0 +1,83 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	margin: 2em auto 1.5em;
+	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.outer-container {
+	max-width: 90%;
+	overflow: clip;
+	margin: 0 auto;
+	position: relative;
+	mask-image: linear-gradient(
+		to right,
+		transparent 0%,
+		rgba(0, 0, 0, 1) 10%,
+		rgba(0, 0, 0, 1) 90%,
+		transparent 100%
+	);
+}
+
+.image-track {
+	display: flex;
+	align-items: center;
+	overflow-x: scroll;
+	gap: 15px;
+	padding: 0 calc(50% - 100px);
+}
+
+.image-track::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.image-track {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.dot-container {
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.dot {
+	border-radius: 50%;
+	background-color: grey;
+	height: 10px;
+	aspect-ratio: 1/1;
+	cursor: pointer;
+	transition: all 0.3s ease-in;
+}
+
+.active {
+	height: 15px;
+	background-color: lightgrey;
+}
+
+.icon-container {
+	display: flex;
+	justify-content: center;
+	height: 50px;
+	margin-top: 50px;
+}
+
+.icon-container svg {
+	fill: grey;
+	height: 50px;
+	width: 50px;
+	display: block;
+	cursor: pointer;
+}
